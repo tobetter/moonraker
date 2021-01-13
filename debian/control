@@ -1,0 +1,24 @@
+Source: moonraker
+Section: python
+Priority: extra
+Maintainer: Eric Callahan <arksine.code@gmail.com>
+Build-Depends: debhelper (>=9),
+	python3-all,
+	python3-setuptools,
+	python3-stdeb,
+	dh-python,
+	dh-systemd
+Standards-Version: 3.9.5
+X-Pythone-Version: >= 3.7
+
+Package: moonraker
+Architecture: any
+Pre-Depends: dpkg (>= 1.16), ${misc:Depends}
+Depends: ${python3:Depends},
+	nginx,
+	klipper,
+	zlib1g-dev,
+	libopenjp2-7,
+	python3-libgpiod
+Description: Web API Server for Klipper
+  ...

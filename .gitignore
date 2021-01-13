@@ -1,0 +1,10 @@
+.gitignore
+*.swp
+
+debian/files
+debian/moonraker/
+.pybuild/
+*-build-stamp
+*.debhelper*
+*.substvars
+*.egg-info
