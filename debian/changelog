@@ -1,0 +1,11 @@
+moonraker (0.6.0) stable; urgency=medium
+
+  * Version BUMP to 0.6.0
+
+ -- Dongjin Kim <tobetter@gmail.com>  Fri, 21 May 2021 05:40:48 +0900
+
+moonraker (0.2.8) stable; urgency=medium
+
+  * Initial release. (Closes: #XXXXXX)
+
+ -- Dongjin Kim <tobetter@gmail.com>  Wed, 13 Jan 2021 11:21:13 +0900

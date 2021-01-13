@@ -17,7 +17,7 @@ from tornado.locks import Event
 VALID_GCODE_EXTS = ['.gcode', '.g', '.gco', '.ufp', '.nc']
 FULL_ACCESS_ROOTS = ["gcodes", "config"]
 METADATA_SCRIPT = os.path.abspath(os.path.join(
-    os.path.dirname(__file__), "../../scripts/extract_metadata.py"))
+    os.path.dirname(__file__), "../scripts/extract_metadata.py"))
 
 UFP_MODEL_PATH = "/3D/model.gcode"
 UFP_THUMB_PATH = "/Metadata/thumbnail.png"
