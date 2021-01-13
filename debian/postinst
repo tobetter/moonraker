@@ -1,0 +1,23 @@
+#!/bin/sh
+
+CONFIG_PATH=/etc/klippy_config
+LOCAL_DOMAIN=$(ip route | awk '/default/ {print $3}' | awk -F'.' '{print $1 "." $2 "." $3 "." 0}')
+[ -z "${LOCAL_DOMAIN}" ] && LOCAL_DOMAIN="192.168.0.0"
+
+mkdir -p ${CONFIG_PATH}
+
+cat>/etc/default/moonraker.conf<<__EOF
+[server]
+host: 0.0.0.0
+port: 7125
+enable_debug_logging: True
+config_path: ${CONFIG_PATH}
+klippy_uds_address: /tmp/klippy_uds
+
+[authorization]
+enabled: True
+trusted_clients:
+ ${LOCAL_DOMAIN}/24
+__EOF
+
+#DEBHELPER#
