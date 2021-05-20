@@ -19,6 +19,7 @@ klippy_uds_address: /tmp/klippy_uds
 [authorization]
 enabled: True
 trusted_clients:
+ 127.0.0.1
  ${LOCAL_DOMAIN}/24
 __EOF
 
